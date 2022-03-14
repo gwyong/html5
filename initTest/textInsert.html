@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--http-equip is a feature which issue orders to web browser server.-->
+    <!--content defines the content of meta.-->
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Express Tyext, Web3D, VR, X3D</title>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.js"></script>
+    <script type="text/javascript" src="http://www.x3dom.org/x3dom/release/x3dom.js"></script>
+    <link rel="stylesheet" type="text/css" href="http://www.x3dom.org/x3dom/release/x3dom.css"/>
+</head>
+<body id="main">
+    <p>Input text and FontStyle</p>
+    <X3d> <!--showStat="True" showLog="True"-->
+        <Scene>
+            <Shape>
+                <Text string="Welcome to Yong's 3D world.">
+                    <FontStyle style='bold' justify="begin" size="1"></FontStyle>
+                </Text>
+                <Appearance><Material diffuseColor="1 0 0"></Material></Appearance>
+            </Shape>
+            <shape>
+                <Text string="This is an intial stage.">
+                    <FontStyle style='ITALIC' justify="end" size="1"></FontStyle>
+                </Text>
+                <Appearance><Material diffuseColor="0 1 0"></Material></Appearance>
+            </shape>
+        </Scene>
+    </X3d>
+</body>
+</html>

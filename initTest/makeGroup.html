@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Group</title>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.js"></script>
+    <script type="text/javascript" src="http://www.x3dom.org/x3dom/release/x3dom.js"></script>
+    <link rel="stylesheet" type="text/css" href="http://www.x3dom.org/x3dom/release/x3dom.css"/>
+</head>
+<body id="main">
+    <p>Group</p>
+    <X3D>
+        <Scene>
+            <Group id='bench'>
+            <Group id='seat'>
+                <Transform>
+                    <Shape id='bar'>
+                        <Box size='4 .3 .4'></Box>
+                        <Appearance id='brown'>
+                            <Material diffuseColor='0.3 0.15 0.0'></Material>
+                        </Appearance>
+                    </Shape>
+                </Transform>
+                <Transform translation='0 0 -.5'><Shape USE='bar'></Shape></Transform>
+                <Transform translation='0 0 -1'><Shape USE='bar'></Shape></Transform>
+                <Transform translation='0 0 -1.5'><Shape USE='bar'></Shape></Transform>
+            </Group>
+            <Transform center='0 0 -1.5' rotation='1 0 0 -2'>
+                <Group USE='seat'></Group>
+            </Transform>
+            <Transform translation='-1.5 -.5 0'>
+                <Shape id='leg'>
+                    <Box size= '.4 1 .4'></Box>
+                    <Appearance USE='brown'></Appearance>
+                </Shape>
+            </Transform>
+            <Transform translation='1.5 -.5 0'><Shape USE='leg'></Shape></Transform>
+            <Transform translation='1.5 -.5 -1.5'><Shape USE='leg'></Shape></Transform>
+            <Transform translation='-1.5 -.5 -1.5'><Shape USE='leg'></Shape></Transform>
+        </Group><!--bench group-->
+        <Transform translation='-6 0 0'>
+            <Transform use='bench'></Transform>
+        </Transform>
+        <Transform translation='6 0 0'>
+            <Transform use='bench'></Transform>
+        </Transform>
+        </Scene>
+    </X3D>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transform</title>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.js"></script>
+    <script type="text/javascript" src="http://www.x3dom.org/x3dom/release/x3dom.js"></script>
+    <link rel="stylesheet" type="text/css" href="http://www.x3dom.org/x3dom/release/x3dom.css"/>
+</head>
+<body id="main">
+    <p>Node DEF/USE</p>
+    <X3D>
+        <Scene>
+            <Transform translation='-3 0 0'>
+                <Shape DEF='cyld'> <Cylinder></Cylinder>
+                    <Appearance DEF='red'>
+                        <Material diffuseColor='1 0 0'></Material>
+                    </Appearance>
+                </Shape>
+            </Transform>
+            <Transform translation='0 0 0'>
+                <Shape>
+                    <Cone></Cone>
+                    <Appearance USE='red'></Appearance>
+                </Shape>
+            </Transform>
+            <Transform translation='3 0 0'>
+                <Shape USE='cyld'></Shape>
+            </Transform>
+        </Scene>
+    </X3D>
+</body>
+</html>
