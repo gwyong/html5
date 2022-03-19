@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Material Color</title>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.js"></script>
+    <script type="text/javascript" src="http://www.x3dom.org/x3dom/release/x3dom.js"></script>
+    <link rel="stylesheet" type="text/css" href="http://www.x3dom.org/x3dom/release/x3dom.css"/>
+</head>
+<body id='main'>
+<p> The Characteristic of Material Node</p>
+<X3D> <!--showStat="True" showLog="True"-->
+    <Scene>
+        <NevigationInfo headlight='false'></NevigationInfo>
+        <Transform translation='-3 0 0'>
+            <Shape>
+                <Sphere></Sphere>
+                <Appearance>
+                    <Material emissiveColor='1 0 0' specularColor='0 1 0' diffuseColor='1 0 0'></Material>
+                </Appearance>
+            </Shape>
+        </Transform>
+        <Transform translation='-1 0 0'>
+            <Shape>
+                <Sphere></Sphere>
+                <Appearance>
+                    <Material diffuseColor='0 0 0' specularColor='1 1 1'></Material>
+                </Appearance>
+            </Shape>
+        </Transform>
+        <Transform translation='1 0 0'>
+            <Shape>
+                <Sphere></Sphere>
+                <Appearance>
+                    <Material diffuseColor='0 1 0' emissiveColor='1 0 0'></Material>
+                </Appearance>
+            </Shape>
+        </Transform>
+        <Transform translation='3 0 0'>
+            <Shape>
+                <Sphere></Sphere>
+                <Appearance>
+                    <Material diffuseColor='1 0 0' emissiveColor='0 1 0' specularColor='0 1 0'></Material>
+                </Appearance>
+            </Shape>
+        </Transform>
+        <Transform translation='5 0 0'>
+            <Shape>
+                <Sphere></Sphere>
+                <Appearance>
+                    <Material diffuseColor='1 0 0' emissiveColor='1 1 1' specularColor='0 1 1'></Material>
+                </Appearance>
+            </Shape>
+        </Transform>
+    </Scene>
+</X3D>    
+</body>
+</html>

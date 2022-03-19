@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Texture</title>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.js"></script>
+    <script type="text/javascript" src="http://www.x3dom.org/x3dom/release/x3dom.js"></script>
+    <link rel="stylesheet" type="text/css" href="http://www.x3dom.org/x3dom/release/x3dom.css"/>
+</head>
+<body id='main'>
+<p>Image Texture Node</p>
+<video width="320" height="240" controls>
+    <source src="http://media.w3.org/2010/05/sintel/trailer.mp4" type="video/mp4">
+</video>
+<X3D showStat="True" showLog="True"> <!--showStat="True" showLog="True"-->
+    <Scene>
+        <Transform translation='-3 0 0'>
+            <Shape>
+                <Box></Box>
+                <Appearance>
+                    <ImageTexture url="universe.jpeg"></ImageTexture>
+                </Appearance>
+            </Shape>
+        </Transform>
+
+        <Transform translation='3 0 0'>
+            <Shape>
+                <Box></Box>
+                <Appearance>
+                    <Texture repeatS='false' repeatT='false'>
+                        <video src=="http://media.w3.org/2010/05/sintel/trailer.mp4" autoplay loop='true'>
+                        </video>
+                    </Texture>
+                    <!--MovieTexture url="http://media.w3.org/2010/05/sintel/trailer.mp4" loop='true'></ImageTexture>-->
+                </Appearance>
+            </Shape>
+        </Transform>
+    </Scene>
+</X3D>    
+</body>
+</html>
